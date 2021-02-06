@@ -53,9 +53,9 @@ BOOL CSudokuApp::InitInstance()
 	CWinApp::InitInstance();
 
 	// 添加控制台输出显示;
-	AllocConsole();
+	/*AllocConsole();
 	freopen("CONOUT$", "w", stdout);
-	setlocale(LC_ALL, "chs");
+	setlocale(LC_ALL, "chs");*/
 
 	AfxEnableControlContainer();
 

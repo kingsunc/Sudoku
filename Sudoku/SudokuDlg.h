@@ -3,7 +3,7 @@
 //
 
 #pragma once
-
+#include "Sudoku.h"
 
 // CSudokuDlg ¶Ô»°¿ò
 class CSudokuDlg : public CDialogEx
@@ -33,4 +33,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedCalculate();
+	afx_msg void OnBnClickedReset();
+
+	CSudoku m_Sudoku;
 };

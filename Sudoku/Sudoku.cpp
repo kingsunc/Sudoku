@@ -64,6 +64,36 @@ int CSudoku::Calculate(int col, int row)
 	return 1;
 }
 
+void CSudoku::InitTrue()
+{
+	for (int col = 0; col < MAX_COUNT; col++)
+	{
+		for (int row = 0; row < MAX_COUNT; row++)
+		{
+			if (m_arrSudoku[col][row].iValue >= 1 && m_arrSudoku[col][row].iValue <= 9)
+			{
+				m_arrSudoku[col][row].bIsTrue = true;
+			}
+			else
+			{
+				m_arrSudoku[col][row].bIsTrue = false;
+			}
+		}
+	}
+}
+
+void CSudoku::Reset()
+{
+	for (int col = 0; col < MAX_COUNT; col++)
+	{
+		for (int row = 0; row < MAX_COUNT; row++)
+		{
+			m_arrSudoku[col][row].iValue = 0;
+			m_arrSudoku[col][row].bIsTrue = false;
+		}
+	}
+}
+
 void CSudoku::Print()
 {
 	for (int col = 0; col < MAX_COUNT; col++)

@@ -19,7 +19,11 @@ public:
 	CSudoku();
 	~CSudoku();
 
+	void InitTrue();
+
 	int Calculate(int col, int row);
+
+	void Reset();
 
 	void Print();
 
@@ -29,6 +33,6 @@ protected:
 
 	bool IsValid();
 
-private:
+public:
 	CElement	m_arrSudoku[MAX_COUNT][MAX_COUNT];
 };
